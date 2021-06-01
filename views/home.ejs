@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Recent & Decent</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="/css/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/css/assets/css/home.css">
+    <link rel="stylesheet" href="/css/assets/css/owl.css">
+
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand active"  href="#"><h2>Recent & <em>Decent</em></h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link active" href="/">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>   
+              <li class="nav-item">
+                <a class="nav-link"href="/products">Our Products</a>
+              </li>
+    
+              <%if(!currentUser){ %>  
+              <li class="nav-item">
+                <a href="/login" class="nav-link active"> Login</a>
+              </li>
+              <% }else{ %> 
+                <li class="nav-item">
+                  <a href="/user/<%=currentUser._id%>/cart" class="nav-link">Cart<i class="fas fa-shopping-cart"></i>
+                    <sup><span class="badge bg-danger"><%= currentUser.cart.length %> </span></sup>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/logout">Logout</a>
+                </li>
+                <% } %> 
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+
+    <div class="banner header-text">      
+      <div class="owl-banner owl-carousel">
+        <div class="banner-item-01">
+          <div class="text-content">
+            <h4>Best Offer</h4>
+            <h2>New Arrivals On Sale</h2>
+           
+          </div>
+        </div>
+        <div class="banner-item-02">
+          <div class="text-content">
+            <h4>Flash Deals</h4>
+            <h2>Get your best products</h2>
+          </div>
+        </div>
+        <div class="banner-item-03">
+          <div class="text-content">
+            <h4>Last Minute</h4>
+            <h2>Grab last minute deals</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Banner Ends Here -->
+
+    <div class="latest-products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Our Latest Categories</h2>
+              <a href="/products">view all products <i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-item">
+              <a href="#"><img src="/css/assets/images/product_01.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="#"><h4>Branded Shoes</h4></a>
+                <!-- <h6>$25.75</h6> -->
+                <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                <ul class="stars">
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                </ul>
+                <span>Reviews (24)</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-item">
+              <a href="#"><img src="/css/assets/images/product_02.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="#"><h4>Hoodies</h4></a>
+                <!-- <h6>$30.25</h6> -->
+                <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                <ul class="stars">
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                </ul>
+                <span>Reviews (21)</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-item">
+              <a href="#"><img src="/css/assets/images/product_03.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="#"><h4> Wool-stoles (Cotton) </h4></a>
+                <!-- <h6>$20.45</h6> -->
+                <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                <ul class="stars">
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                </ul>
+                <span>Reviews (36)</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-item">
+              <a href="#"><img src="/css/assets/images/product_04.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="#"><h4>Toys</h4></a>
+                <!-- <h6>$15.25</h6> -->
+                <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                <ul class="stars">
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                </ul>
+                <span>Reviews (48)</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-item">
+              <a href="#"><img src="/css/assets/images/product_05.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="#"><h4>Winter Swaters</h4></a>
+                <!-- <h6>$12.50</h6> -->
+                <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                <ul class="stars">
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                </ul>
+                <span>Reviews (16)</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-item">
+              <a href="#"><img src="/css/assets/images/product_06.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="#"><h4>More winter collections </h4></a>
+                <!-- <h6>$22.50</h6> -->
+                <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                <ul class="stars">
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                </ul>
+                <span>Reviews (32)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="best-features">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>About Recent & Decent</h2>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="left-content">
+              <h4>Looking for the best products?</h4>
+              <p><a rel="nofollow" href="" target="_parent"></a> Recent & Decent is here to provide you the best deals. Now you can search for almost any product online, without having to go anywhere physically. </p>
+              <ul class="featured-list">
+                <li><a href="#">Fast Delivery.</a></li>
+                <li><a href="#">Contact-less Delivery.</a></li>
+                <li><a href="#">Easy Return.</a></li>
+                <li><a href="#">Brand Warrenty.</a></li>
+                <li><a href="#">Heighest Discount and Offers.</a></li>
+              </ul>
+              <a href="/contact" class="filled-button">Want to know more about us?</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="right-image">
+              <img src="/css/assets/images/feature-image.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="call-to-action">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <div class="row">
+                <div class="col-md-8">
+                  <h4>Creative &amp; Unique <em>Recent & Decent</em> Products</h4>
+                  <p>Our own special & unique Smartbuy products, which you will never get at any other store.</p>
+                </div>
+                <div class="col-md-4">
+                  <a href="/products" class="filled-button">Purchase Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-muted mt-5" id="ftr">
+  <!-- Section: Social media -->
+  <section
+    class="d-flex text-white justify-content-center justify-content-lg-between p-4 border-bottom"
+  >
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="https://www.instagram.com/jayzz.here/" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/captain.jacksparr0ww/" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://github.com/jayyuuuu" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://twitter.com/A_saffronist" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="mailto:mca10051.19@gmail.com" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+     
+      <a href="https://www.linkedin.com/in/jaydeep-kumar-silawat-674b18197/" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-white text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-white text-uppercase fw-bold mb-4 ">
+            <i class="fas fa-gem me-3"></i>Recent & Decent
+          </h6>
+          <p>
+           A E-commerce Company which is buying and selling goods and services over the internet. Almost anything can be purchased through Recent & Decent today.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>Fashion.</p>
+          <p>Mobiles and Tablets.  </p>
+          <p>Groceries </p>
+          <p> Home Furnishings.</p>
+          <p>Books</p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+          <p class="mr-2"><i class="fas fa-home me-4"></i>Neemuch, (m.p) 458441</p>
+          <p class="ml-1"><i class="fas fa-envelope ml-3 me-4"></i>mca10051.19@bitmesra.ac.in</p>
+          <p style="margin-right: 62px;"><i class="fas fa-phone me-3"></i> + 91 8770939403</p>
+          <p style="margin-right: 62px;"><i class="fa fa-whatsapp me-3" aria-hidden="true"></i> + 91 7354632686</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="">JayKumawat</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="/css/vendor/jquery/jquery.min.js"></script>
+    <script src="/css/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Additional Scripts -->
+    <script src="/css/assets/js/custom.js"></script>
+    <script src="/css/assets/js/owl.js"></script>
+    <script src="/css/assets/js/slick.js"></script>
+    <script src="/css/assets/js/isotope.js"></script>
+    <script src="/css/assets/js/accordions.js"></script>
+
+
+    <script language = "text/Javascript"> 
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+          }
+      }
+    </script>
+
+
+</html>

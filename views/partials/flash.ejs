@@ -1,0 +1,16 @@
+
+<% if(success && success.length){ %> 
+<div class="alert alert-success alert-dismissible fade show" style="margin: 0; margin-top: 3.6rem;  padding: 15px;" role="alert" >
+    <%= success %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+<% }%>
+
+<% if(error && error.length){ %> 
+<div class="alert alert-danger alert-dismissible fade show" style="margin-top: 3.7rem;" role="alert">
+    <%= error %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+<% }%>

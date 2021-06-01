@@ -1,0 +1,64 @@
+<%- include("../partials/header.ejs") %> 
+<%- include("../partials/navbar.ejs") %> 
+
+<link rel="stylesheet" href="/css/star.css">
+<%- include("../partials/flash") %> 
+<div class="container mt-5" style="margin-top: 90px !important;">
+
+
+  
+
+    <h6 class="display-6 mb-5">Items in your Cart (<%= currentUser.cart.length %>) </h6>
+    
+
+  <div class="row">
+  <div class="col-lg-8">
+    <% for(let item of userCart){ %> 
+      <div class="card mb-3" style="width: 90%;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 200px" src="<%=item.img%> " alt="...">
+       </div>
+       <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"><%=item.name%> </h5>
+          <strong class="card-text">&#8377;<%=item.price%> </strong>
+        <form action="/user/<%=currentUser._id%>/cart/<%=item._id%>?_method=DELETE" method ="post">
+         <br>
+          <button class="btn btn-sm btn-danger">remove</button>
+        </form>
+        
+
+        </div>
+     </div>
+   </div>  
+</div>
+<% } %> 
+
+</div>
+
+
+<div class="col-lg-4">
+  <h6 class="display-6 fw-bold mb-4"> <i class="fad fa-rupee-sign"></i>&nbsp; &nbsp; Checkout : </h6>
+  <% totalAmount=0 %> 
+  <ul class="list-group">
+    <% for(let item of userCart){ %> 
+    <li class="list-group-item"><%=item.name%> <strong style="display: flex; position: absolute; top: 15px; right: 15px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">  &#8377;<%=item.price %> </strong></li>
+  <% totalAmount+=item.price%> 
+
+
+ 
+    <% } %> 
+    
+  </ul>
+  <div class="mt-2">
+    <p class="fw-bold list-group-item" >Total Amount : <strong style="display: flex; position: absolute; top: 15px; right: 15px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> &#8377 <%= totalAmount %> </strong></p>
+    <a href="/cart/payment" class="btn btn-success mt-4">Proceed To Pay</a>
+ 
+ 
+  </div>
+</div>
+</div>
+</div>
+
+<%- include("../partials/footer.ejs") %>

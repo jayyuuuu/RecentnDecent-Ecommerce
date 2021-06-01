@@ -1,0 +1,189 @@
+<%- include("../partials/header.ejs") %> 
+<%- include("../partials/navbar.ejs") %> 
+
+<link rel="stylesheet" href="/css/star.css">
+<%- include("../partials/flash") %> 
+<div class="container " style="margin-top: 5rem;">
+
+
+
+    
+
+<!-- 
+
+
+    <div class="card mb-3" style="max-width: 100%;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="<%=product.img%>" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row">
+        <div class="col-lg-6 m-0 p-0">
+            <div class="card" ">
+           <img src="<%=product.img%>"class="card-img-top" alt="...">
+  
+    </div>
+ </div>
+  
+      <div class="col-lg-6">
+
+
+        <class class="card-body">
+          <h5 class="card-title" style="font-size: 40px;"><%=product.name%></h5>
+          <h5 class="card-title" style="color: green; font-size: 18px;">Special Price</h5>
+        
+          <h4 class="card-title" style="display: inline-block;font-size: 40px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">&#8377; <%=product.price%>   </h4>
+          <h5 style="display: inline-block;"> &nbsp;&nbsp;    </h5>
+          <h5 class="card-title" style="font-family:'Segoe UI'; opacity: 0.8; text-decoration: line-through; display: inline-block; font-size: 20px; ">&#8377; <%=(product.price+9000)%>    </h5>
+         <br>
+
+<h5 class="mt-2 mb-1">Available Offers:</h5>
+<ul style="font-size: 12px;">
+   <li><i class="fas fa-tag" style="color: green;"></i>  Bank Offer10% off on HDFC Bank Credit Card transactions, up to ₹1000. On Orders of ₹5000</li>
+   <li><i class="fas fa-tag" style="color: green;"></i>  Bank Offer10% off on HDFC Bank Debit and Credit Cards EMI transactions, up to ₹1750. On Orders of ₹5000</li>
+   <li><i class="fas fa-tag" style="color: green;"></i>  Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit Card.</li>
+   <li><i class="fas fa-tag" style="color: green;"></i>  Special PriceGet extra 12% off (price inclusive of discount)</li>
+   <li><i class="fas fa-tag" style="color: green;"></i>  Ab orr kya hi chahiye Free m hi ley jao apna hi maal h</li>
+
+</ul>
+          <h5 class="mt-3" style="font-size: 15px;">Warrenty: <span style="font-size: 12px; opacity: 0.8;">1 year from the date of purchase. baad m mt aana.</span></h5>
+          <h5 class="mt-3" style="font-size: 15px; opacity: 0.9;"><i class="far fa-times" style="color: red;"></i>&nbsp; No Replacemet & Return.</h5>
+          
+          <!-- <h5  class="mt-4 mb-4" style="font-size: 15px;"> Delivery: <input style=" border: none; margin: 3px; border-bottom: 1px solid; outline: none;" type="email" placeholder="Check Pincode"> <input style="background-color: orangered; padding-left: 4px; padding-right: 4px;" type="submit" value="Check"> </h5>  -->
+                   
+          <!-- <p class="card-text"><%=product.desc%></p> -->
+          <!-- <a href="#" class="btn btn-success">Order Now</a> -->
+         
+          <div style="display: inline-block;">
+            <form action="/user/<%=product._id%>/cart " method="POST">
+              <button class="btn btn-primary" style="background-color: green;" ><i class="fa fa-bolt " ></i>&nbsp Order Now</button>
+        </form>
+
+          </div>
+
+
+
+          <!-- <a href="/products/<%=product._id %>/edit" class="btn btn-warning">Edit</a> -->
+         
+          <div class="m-3" style="display: inline-block;">
+            <form action="/user/<%=product._id%>/cart " method="POST">
+              <button class="btn btn-primary" style="background-color: orangered;" >Add to Cart</button>
+        </form>
+
+          </div>
+         
+          <p class="card-text"><%=product.desc%></p>
+         
+          <div class="mt-3">
+
+            <!-- <form action="/products/<%=product._id %>?_method=DELETE" method="POST">
+                <button class="btn btn-danger"> Delete</button>
+          </form> -->
+        </div>
+   </div> 
+
+
+
+   <div class="col-lg-6">
+</div>
+
+
+   <div class="col-lg-6">
+
+            <h4 >Rate this product</h4>
+        
+            <form class="validated-form" action="/products/<%=product._id%>/review " method="POST" style="max-width: 70%" novalidate>
+              
+                <!-- <div class="mb-3">
+                    <label for="rating" class="form-label">Rating</label>
+                    <input type="range" class="form-range" min="1" max="5" name="rating" id="rating">
+                </div> -->
+
+                <fieldset class="starability-basic mt-3">
+           
+                    <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="1" checked aria-label="No rating." />
+                    <input type="radio" id="first-rate1" name="rating" value="1" />
+                    <label for="first-rate1" title="Terrible">1 star</label>
+                    <input type="radio" id="first-rate2" name="rating" value="2" />
+                    <label for="first-rate2" title="Not good">2 stars</label>
+                    <input type="radio" id="first-rate3" name="rating" value="3" />
+                    <label for="first-rate3" title="Average">3 stars</label>
+                    <input type="radio" id="first-rate4" name="rating" value="4" />
+                    <label for="first-rate4" title="Very good">4 stars</label>
+                    <input type="radio" id="first-rate5" name="rating" value="5" />
+                    <label for="first-rate5" title="Amazing">5 stars</label>
+                  </fieldset>
+
+
+
+
+                <div class="mb-3">
+                        <label for="desc" class="form-label">Write a review</label>
+                        <textarea class="form-control" id="desc" cols="35" rows="3" name="comment" required></textarea>
+                        <div class="invalid-feedback">
+                          Please leave a comment.
+                        </div>
+                </div>
+        
+               
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>    
+            
+            <div class="mb-3 mt-3">
+                <% for(let review of product.reviews){ %>
+            
+                    <div class="card mb-3">
+                        <div class="card-header text-capitalize pt-0 pb-0">
+                            <strong><%=review.user %> </strong>
+                        
+                        </div>
+                        <div class="card-body pt-1 pb-1">
+                          <!-- <h5 class="card-title">Rating :<%=review.rating%>  </h5> -->
+
+
+                          <p class="starability-result" data-rating="<%=review.rating%>">
+                            Rated: <%=review.rating%> stars
+                          </p>
+<h5>-------------</h5>
+
+                          <p class="card-text mt-0"><%=review.comment%></p>
+                        </div>
+                      </div>
+                
+                
+     
+                 <% } %> 
+        </div>
+
+       </div>
+        </div>
+       
+    </div>
+
+
+</div>
+
+
+<%- include("../partials/footer.ejs") %>

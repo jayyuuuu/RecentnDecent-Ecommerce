@@ -1,0 +1,62 @@
+<%- include("../partials/header.ejs") %> 
+<%- include("../partials/navbar.ejs") %> 
+
+
+
+<style>
+
+@media screen and (max-width:650px)  {
+  
+.frm{
+  
+  max-width: 90% !important;
+  
+}
+
+form input{
+  width: 100%; 
+}
+
+}
+
+</style>
+
+
+
+<div class="container box" style="margin-top: 4rem; width: 80vw">
+
+    <form class="validated-form frm" action="/login" method="POST" style="max-width: 60%; margin: 10px auto" novalidate>
+        <%- include("../partials/flash") %> 
+        <h4 class="display-4 mb-4">R&D Login</h4>
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" placeholder="Username" name="username" required >
+          <div class="invalid-feedback">
+            Please Enter a Username.
+          </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">password</label>
+            <input type="password" class="form-control" id="password" placeholder="password" name="password" required>
+            <div class="invalid-feedback">
+              Please Enter a Password.
+          </div>
+          </div>
+    
+       
+        <button type="submit" class="btn btn-primary mt-3 bg-dark">Login</button>
+   <br>
+   <br>
+    <h5> New User? <a href="/register">signIn</a> here. </h5>  
+      </form>
+
+
+</div>
+
+<%- include("../partials/footer.ejs") %> 
+
+
+
+
+
