@@ -5,13 +5,13 @@ const products = [
   
      {
          name : " Iphone 12",
-         img : 'https://images.unsplash.com/photo-1604399326967-8c3ddbb13e19?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
+         img : 'https://images.unsplash.com/photo-1603898037225-1bea09c550c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80',
          price : 70000,
          desc : 'The iPhone 12 costs more than its predecessors but has a crisp new HDR OLED screen. It offers nearly all the feaures of the iPhone 12 Pro, minus some camera capabilities, but should be a good enough package for most users. Apple has returned to a flat aluminium frame but the iPhone 12 promises to be more durable thanks to its Ceramic Shield material on the front and IP68 rating. You get the A14 Bionic SoC which makes everyday use extremely smooth and responsive, but the device does get a bit warm when stressed. Battery life is good, but not great, and you will be able to get through a full day. The iPhone is relatively light and easy to handle. iOS has some customisation options and privacy features.'
      },
      {
         name : " Macbook Air",
-        img : 'https://images.unsplash.com/photo-1493020258366-be3ead1b3027?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+        img : 'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
         price : 200000,
         desc : 'Apple MacBook Air 2020 is a macOS laptop with a 13.30-inch display that has a resolution of 2560x1600 pixels. It is powered by a Core i3 processor and it comes with 8GB of RAM. The Apple MacBook Air 2020 packs 256GB of SSD storage. Graphics are powered by Integrated Graphics Processor.',
     },
